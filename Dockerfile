@@ -29,10 +29,10 @@ ENV MACHINE_AGENT_HOME /opt/appdynamics
 
 WORKDIR ${MACHINE_AGENT_HOME}
 
-COPY ./machine-agent/updateAnalyticsAgent.sh ./updateAnalyticsAgent.sh
+COPY ./updateAnalyticsAgent.sh ./updateAnalyticsAgent.sh
 RUN chmod +x ./updateAnalyticsAgent.sh
 
-COPY ./machine-agent/startup.sh ./startup.sh
+COPY ./startup.sh ./startup.sh
 RUN chmod +x ./startup.sh
 
 RUN chgrp -R 0 /opt && \
